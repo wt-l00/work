@@ -5,6 +5,7 @@ file = open('syscalllist.txt')
 file_data = file.read()
 
 for line in file_data.split('\n'):
-  for tmp in line.split(','):
-    if "SEN(" in tmp:
-      print('"' + tmp[tmp.index('(')+1:tmp.index(')')] + '"' + ',')
+  tmp1 = line.find('\"')
+  tmp2 = line.find('\"', tmp1+1)
+  
+  print('"' + line[tmp1+1:tmp2] + '"' + ',')
