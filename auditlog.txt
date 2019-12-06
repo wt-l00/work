@@ -1,0 +1,7 @@
+type=SECCOMP msg=audit(1575519251.141:246): auid=1000 uid=1000 gid=1000 ses=3 pid=8793 comm="mkdir" exe="/usr/bin/mkdir" sig=31 arch=c000003e syscall=83 compat=0 ip=0x7fb2c8670efb code=0x0
+type=SECCOMP msg=audit(1575519363.561:251): auid=1000 uid=1000 gid=1000 ses=3 pid=9016 comm="mkdir" exe="/usr/bin/mkdir" sig=31 arch=c000003e syscall=83 compat=0 ip=0x7fdd20b8aefb code=0x0
+type=SECCOMP msg=audit(1575519431.545:259): auid=1000 uid=1000 gid=1000 ses=3 pid=9037 comm="mkdir" exe="/usr/bin/mkdir" sig=31 arch=c000003e syscall=83 compat=0 ip=0x7ff0c89e5efb code=0x0
+type=SECCOMP msg=audit(1575519548.553:262): auid=1000 uid=1000 gid=1000 ses=3 pid=9069 comm="rmdir" exe="/usr/bin/rmdir" sig=31 arch=c000003e syscall=84 compat=0 ip=0x7f974bf9cfcb code=0x0
+type=SECCOMP msg=audit(1575520172.999:207): auid=1000 uid=1000 gid=1000 ses=3 pid=3921 comm="mkdir" exe="/usr/bin/mkdir" sig=31 arch=c000003e syscall=83 compat=0 ip=0x7fbcf8c15efb code=0x0
+type=SECCOMP msg=audit(1575520185.934:209): auid=1000 uid=1000 gid=1000 ses=3 pid=3929 comm="rmdir" exe="/usr/bin/rmdir" sig=31 arch=c000003e syscall=84 compat=0 ip=0x7fc94e506fcb code=0x0
+type=SECCOMP msg=audit(1575521015.388:227): auid=1000 uid=1000 gid=1000 ses=3 pid=4498 comm="mkdir" exe="/usr/bin/mkdir" sig=31 arch=c000003e syscall=83 compat=0 ip=0x7f061a2e3efb code=0x0
