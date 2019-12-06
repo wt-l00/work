@@ -22,17 +22,17 @@ int main() {
     case 0: /* child */
       rc = seccomp_load(ctx);
       if (rc < 0) goto out;
-      execl("/bin/bash", "/bin/bash", NULL);
-      break;
-    
-    default: /* parent */ 
       if ((fp = fopen("starttime.txt", "w")) == NULL) {
-        printf("file open error\n");
+        printf("file error\n");
         exit(1);
       }
       time_t t = time(NULL);
       fprintf(fp, "%ld", t);
       fclose(fp);
+      execl("/bin/bash", "/bin/bash", NULL);
+      break;
+    
+    default: /* parent */ 
       wait(NULL);
       execlp("./exseccomp.sh", "-a", NULL);
       break;

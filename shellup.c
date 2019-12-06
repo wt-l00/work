@@ -13,7 +13,6 @@
 #include <sys/types.h>
 #include <sys/syscall.h>
 #include <sys/ptrace.h>
-#include <time.h>
 
 #ifndef seccomp
 int seccomp(unsigned int op, unsigned int flags, void *args)
@@ -83,9 +82,6 @@ int main() {
       break;
     
     default: /* parent */ 
-      printf("logging start\n");
-      time_t t = time(NULL);
-      printf("unixtime : %ld\n", t);
       wait(NULL); 
       break;
   }

@@ -7,4 +7,4 @@ file_data = file.read()
 for line in file_data.split('\n'):
   for tmp in line.split(','):
     if "SEN(" in tmp:
-      print('"' + tmp[6:-1] + '"' + ',')
+      print('"' + tmp[tmp.index('(')+1:tmp.index(')')] + '"' + ',')
