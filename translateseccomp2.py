@@ -336,7 +336,9 @@ syscalllist = ["read",
 "io_pgetevents_time64"
 ]
 
-start_time = int(input())
+file = open('starttime.txt');
+start_time = int(file.read())
+print(start_time)
 
 file = open('auditlog.txt')
 file_data = file.read()
