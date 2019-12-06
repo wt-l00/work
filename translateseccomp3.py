@@ -356,13 +356,11 @@ for line in file_data.split('\n'):
     if 'syscall=' in data:
       set_syscall.add(data[8:])
 
-str1 = """
-#include <stdio.h>
+str1 = """#include <stdio.h>
 #include <sys/wait.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <errno.h>
-#include <arpa/telnet.h>
 #include <stddef.h>
 #include <linux/audit.h>
 #include <linux/filter.h>
@@ -402,8 +400,7 @@ struct sock_filter filter[] = {
     EXAMINE_SYSCALL,
 """
 
-str2 = """
-    KILL_PROCESS
+str2 = """    KILL_PROCESS
 };
 
 struct sock_fprog prog = {

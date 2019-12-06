@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <sys/wait.h>
 #include <unistd.h>
@@ -87,11 +86,9 @@ struct sock_filter filter[] = {
     ALLOW_SYSCALL(fcntl),
     ALLOW_SYSCALL(lseek),
     ALLOW_SYSCALL(chdir),
-    ALLOW_SYSCALL(mkdir),
     ALLOW_SYSCALL(mmap),
     ALLOW_SYSCALL(chown),
     ALLOW_SYSCALL(sysinfo),
-
     KILL_PROCESS
 };
 
